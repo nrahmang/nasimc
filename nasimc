@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+import time
+import sys
+import os
+filei = sys.argv[1]
+file = list(filei.split("."))
+
+if file[-1] == "c":
+	os.system("figlet 'C Compiler'")
+	print("Compiling " + filei)
+	os.system("clang " + filei)
+	os.system("clear")
+	time.sleep(.3)
+	os.system("./a.out")
+	os.system("rm -rf a.out")
+elif file[-1] == "cpp":
+	os.system("figlet 'C++ Compiler'")
+	print("Compiling " + filei)
+	os.system("clang++ " + filei)
+	os.system("clear")
+	time.sleep(.3)
+	os.system("./a.out")
+	os.system("rm -rf a.out")
